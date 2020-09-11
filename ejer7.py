@@ -3,4 +3,19 @@
 #y devuelva un diccionario con los valores especificados en el archivo.
 #NOTA: Utilizar las funciones split() y strip()
 
+def dicc_list(archivo):
+    f=open(archivo,'r')
+    listaraw=f.read()
+    listaraw=listaraw.strip()
+    lista=listaraw.split('\n')
+    #print(lista)
 
+    dicc={}
+    for i in lista:
+        aux=i.split('=')
+        dicc[aux[0]]=aux[1]
+    
+    print(dicc)
+
+dicc_list('config.txt')
+    

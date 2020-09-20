@@ -4,7 +4,7 @@ from persona1 import Persona
 
 print("hola mundo")
 
-p=Persona("Ernesto",14)
+p=Persona("Ernesto",24)
 g=Persona("Sebastian ",46)
 
 #print(type(p))
@@ -19,7 +19,8 @@ print("{}  {}" .format(p.get_nombre(),p.get_edad()))
 print("{}  {}" .format(g.get_nombre(),g.get_edad()))  
 
 if p.es_mayor_de_edad():
-     print("Es mayor de Edad")
+     
+     print(p.get_nombre(),",es mayor de Edad")
 else:
-     print("Es menor de Edad")
+     print(p.get_nombre(),",es menor de Edad")
 

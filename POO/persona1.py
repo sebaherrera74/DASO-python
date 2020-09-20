@@ -33,5 +33,23 @@ class Persona:
         else:
             return False
         
+#metodo estatico para imprimir una lista de personas 
+    @staticmethod
+    def print_personas(personas):
+        for p in personas:
+            print(p.get_nombre()+ " edad:"+str(p.get_edad()))
+    
+#metodo estatico para agrgar en un archivo una lista de personas ejercicio 6
+    @staticmethod
+    def dump_csv(nombre_archivo,personas):
+        with open(nombre_archivo,"w",encoding="utf-8") as f: #si pongo w, puedo pasarle un string
+            line="Nombre ,Edad \n"
+            f.write(line)
+            for p in personas:
+                line=(p.get_nombre()+ "," + str(p.get_edad())+"\n") #Imprimo en el formato "Nombre","edad"
+                # line="{},{}\n".format(p.get_nombre(),p.get_edad()) otra forma de imprimir
+                f.write(line)
+    
+        
         
       
